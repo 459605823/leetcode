@@ -5,6 +5,7 @@ function ListNode(val){
 }
 // 方法一：删除倒数第n个节点可转化为删除从开头数起的第（l-n+1)个节点 l为链表长度
 var removeNthFromEnd1 = function(head, n) {
+  // dummy为head之前的伪节点
   let dummy = new ListNode(0);
   dummy.next = head;
   let length = 0;
