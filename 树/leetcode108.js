@@ -15,6 +15,7 @@ var buildTree = function(array, minIndex, maxIndex) {
   if(minIndex > maxIndex){
     return null
   }
+  // 二分查找
   // 数组中间位置的值作为根节点
   var midIndex = parseInt((minIndex + maxIndex + 1) / 2)
   var root = new TreeNode(array[midIndex])
