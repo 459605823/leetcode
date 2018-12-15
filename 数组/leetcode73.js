@@ -21,9 +21,7 @@ var setZeroes2 = function(matrix) {
   // 跟据一维数组的记录值更新矩阵
   for(var i = 0; i < rows; i++){
     for(var j = 0; j < cols; j++){
-      if(rowArr[i] == true){
-        matrix[i][j] = 0
-      } else if(colArr[j] == true){
+      if(rowArr[i] || colArr[j]){
         matrix[i][j] = 0
       }
     }

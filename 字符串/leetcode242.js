@@ -1,6 +1,7 @@
 // 给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的一个字母异位词。
 // 字母异位词：所含字母和个数相同，但顺序不同
 
+// 方法一：利用对象储存键值判断
 var isAnagram = function(s, t) {
   if (s.length === 0 && t.length === 0){
     return true;
@@ -35,4 +36,22 @@ var isAnagram = function(s, t) {
     return false;
   }
 }
-console.log(isAnagram("anagram", "nagaram"))
+
+// 方法二：当且仅当它们的排序字符串相等时，两个字符串是字母异位词。
+var isAnagram2 = function(s, t){
+  if (s.length === 0 && t.length === 0){
+    return true
+  }
+  if (s.length === t.length){
+    var sortS = s.split("").sort().join("")
+    var sortT = t.split("").sort().join("")
+    if(sortS == sortT){
+      return true
+    } else {
+      return false
+    }
+  } else {
+    return false
+  }
+}
+console.log(isAnagram2("anagram", "nagaram"))
