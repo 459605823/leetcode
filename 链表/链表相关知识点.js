@@ -3,6 +3,8 @@
 // 遍历链表就是跟着链表从链表的头元素（head）一直走到尾元素（但是不包含链表的头借点，头通常用来作为链表的接入点）
 // 链表的尾元素指向一个null节点。
 
+// 链表解题技巧: var dummyHead = new ListNode(0) 设置一个指向链表head的伪节点
+
 // node类标识节点：val用来保存节点上的数据，next用来保存指向下一个节点的链接
 function Node(val){
     this.val = val;
